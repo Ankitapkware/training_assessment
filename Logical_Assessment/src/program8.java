@@ -23,8 +23,7 @@ public class program8 {
 		System.out.print("Recursive: ");
 		System.out.print(reverseRec(a));
 		
-		System.out.print("\nIterative: ");
-		System.out.print(reverseItr(a));
+		
 
 		sc.close();
 		
