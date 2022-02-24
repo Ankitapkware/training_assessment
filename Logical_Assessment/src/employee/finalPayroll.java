@@ -59,7 +59,6 @@ class finalPayroll extends Payroll{
 				   baseSal += baseSal*0.1;
 				   baseSal += sales*0.12;
 				   System.out.println("salary is: " + baseSal);
-
 		   }
 		   
 		   else 
