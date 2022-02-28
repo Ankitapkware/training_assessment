@@ -2,10 +2,12 @@ package classes;
 
 public class SquareShapes extends Shapes{
 	int a;
+	String cname;
 
-	SquareShapes(int a) {
+	SquareShapes(int a, String cname) {
 		super();
 		this.a = a;
+		this.cname = cname;
 	}
 	
 	@Override
