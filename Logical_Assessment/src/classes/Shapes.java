@@ -1,7 +1,13 @@
 package classes;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import com.logging.Log;
+
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 
 public class Shapes {
@@ -10,6 +16,8 @@ public class Shapes {
 
         ArrayList<Shape> list = new ArrayList<Shape>();
         Scanner sc=new Scanner(System.in); 
+        Logger logger= Logger.getLogger(Log.class.getName());
+
         
         System.out.println("Enter the number of shapes you want to enter: ");
         try {
@@ -28,6 +36,7 @@ public class Shapes {
     			  String cname = sc.next();
     			 int r = sc.nextInt();
     			 CircleShapes c = new CircleShapes(r,cname);
+ 		         logger.log(Level.INFO, "circle object is created!");
     			 list.add(c);
     		 }
     		 
@@ -38,6 +47,7 @@ public class Shapes {
     			 System.out.println("Enter details for Square: \nSide:");
     			 int a = sc.nextInt();
     			 SquareShapes s = new SquareShapes(a,cname);
+    		        logger.log(Level.INFO, "Square object is created!");
     			 list.add(s);
     		 }
     		 
@@ -50,6 +60,8 @@ public class Shapes {
     			 System.out.println("Breadth:");
     			 int b = sc.nextInt();
     			 ReactangleShapes rs = new ReactangleShapes(l,b,cname);
+ 		        logger.log(Level.INFO, "Recatangle object is created!");
+
     			 list.add(rs);
     		 }
     		 
