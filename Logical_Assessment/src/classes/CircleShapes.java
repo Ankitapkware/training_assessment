@@ -1,19 +1,21 @@
 package classes;
 
-public class CircleShapes extends Shapes{
+public class CircleShapes extends Shape{
 	int r;
 	String cname;
 
 		CircleShapes(int r, String cname) {
 			super();
 			this.r = r;
-			this.cname = cname;
+			nameShape = cname;
 		}
 		
-		@Override
-		
-		public double area(){
-			return  Math.PI*r*r;
+		 String getName(String cname){
+			return cname;
+		}
+		 
+		public void area(){
+			System.out.println("Area: " +Math.PI*r*r);
 		}
 }
 

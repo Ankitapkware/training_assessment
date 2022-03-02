@@ -1,18 +1,22 @@
 package classes;
 
-public class SquareShapes extends Shapes{
+public class SquareShapes extends Shape{
 	int a;
 	String cname;
 
 	SquareShapes(int a, String cname) {
 		super();
 		this.a = a;
-		this.cname = cname;
+		nameShape = cname;
 	}
 	
+	 String getName(String cname){
+			return cname;
+		}
 	@Override
 	
-	public double area(){
-		return  a*a;
+	public void area(){
+		System.out.println("Area: " + a*a);
 	}
+	
 }

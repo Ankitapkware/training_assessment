@@ -1,6 +1,6 @@
 package classes;
 
-public class ReactangleShapes extends Shapes{
+public class ReactangleShapes extends Shape{
 	int l;
 	int b;
 	String cname;
@@ -10,13 +10,14 @@ public class ReactangleShapes extends Shapes{
 		super();
 		this.l = l;
 		this.b = b;
-		this.cname = cname;
+		nameShape = cname;
 
 	}
 	
+	 
 	@Override
 	
-	public double area(){
-		return  l*b;
+	public void area(){
+		System.out.println("Area: "  +l*b);
 	}
 }

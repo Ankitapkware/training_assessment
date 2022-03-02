@@ -3,19 +3,12 @@ package classes;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class  Shape{
-	String cname;
-
-}
 
 public class Shapes {
-	private Object cname;
-	public double area() {
-		return 0;
-	}
+
 	public static void main(String args[]) {
 
-        ArrayList<Shapes> list = new ArrayList<Shapes>();
+        ArrayList<Shape> list = new ArrayList<Shape>();
         Scanner sc=new Scanner(System.in); 
         
         System.out.println("Enter the number of shapes you want to enter: ");
@@ -32,22 +25,20 @@ public class Shapes {
     		 if (n == 1) {
     			 System.out.println("Enter details for Circle: \nRadius:");
     			 System.out.println("Enter name: ");
-    			 String cname = sc.next();
+    			  String cname = sc.next();
     			 int r = sc.nextInt();
     			 CircleShapes c = new CircleShapes(r,cname);
     			 list.add(c);
-    			// System.out.println("area: " + c.area() );
     		 }
     		 
     		 else if (n == 2)
     		 {
     			 System.out.println("Enter name: ");
-    			 String cname = sc.next();
+    			  String cname = sc.next();
     			 System.out.println("Enter details for Square: \nSide:");
     			 int a = sc.nextInt();
     			 SquareShapes s = new SquareShapes(a,cname);
     			 list.add(s);
-    		//	 System.out.println("area: " + s.area() );
     		 }
     		 
     		 else if (n == 3)
@@ -60,7 +51,6 @@ public class Shapes {
     			 int b = sc.nextInt();
     			 ReactangleShapes rs = new ReactangleShapes(l,b,cname);
     			 list.add(rs);
-    		//	 System.out.println("area: " + rs.area() );
     		 }
     		 
     		 else 
@@ -70,10 +60,11 @@ public class Shapes {
 	}
         System.out.println("Enter shape name for which you need to find the area: ");
 		String name = sc.next();
-		int in=0;
-		for(Shapes s : list) {
-			if(s.cname.equals(name)) {
-				in++;
+		int in = 0;
+		for(Shape s : list) {
+			if(s.nameShape.equals(name)) {
+
+   			    in++;
 				s.area();
 			}
 			else {
@@ -88,5 +79,6 @@ public class Shapes {
 	}
 
 	}
+	
 	}
 	
